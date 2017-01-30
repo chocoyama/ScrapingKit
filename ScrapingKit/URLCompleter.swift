@@ -15,11 +15,19 @@ class URLCompleter {
     
     private class func concatHomePrefix(to target: String, baseUrl: URL?) -> String? {
         let path = target.hasPrefix("/") ? target : "/\(target)"
-        return homeUrl(from: baseUrl).flatMap { "\($0)\(path)" }
+        if let homeUrl = homeUrl(from: baseUrl) {
+            return "\(homeUrl)\(path)"
+        } else {
+            return nil
+        }
     }
     
     private class func homeUrl(from baseUrl: URL?) -> String? {
         guard let baseUrl = baseUrl else { return nil }
-        return baseUrl.host.flatMap { "\(baseUrl.scheme)://\($0)" } ?? nil
+        if let scheme = baseUrl.scheme, let host = baseUrl.host {
+            return "\(scheme)://\(host)"
+        } else {
+            return nil
+        }
     }
 }
