@@ -98,7 +98,7 @@ extension ImageParser {
             return
         }
         
-        let destinationUrlString = jiNode?.extract(attributes: "href", at: "a")
+        let destinationUrlString = jiNode?.parent?.extract(attributes: "href", at: "a")
         if let url = destinationUrlString , url.hasImageSuffix {
             append(imageUrlString: url, destinationUrlString: nil)
         } else  {
