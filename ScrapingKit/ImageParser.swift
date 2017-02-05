@@ -93,10 +93,13 @@ extension ImageParser {
     }
     
     private func appendImageAtImgTag(_ jiNode: JiNode?) {
-        guard let src = jiNode?.extract(attributes: "src", at: "img"),
-            src.characters.count > 0 else {
-            return
+        var tmpSrc: String?
+        tmpSrc = jiNode?.extract(attributes: "src", at: "img")
+        if tmpSrc == nil || tmpSrc?.characters.count == 0 {
+            tmpSrc = jiNode?.extract(attributes: "ng-src", at: "img") // retrip対策
         }
+        
+        guard let src = tmpSrc, src.characters.count > 0 else { return }
         
         let destinationUrlString = jiNode?.parent?.extract(attributes: "href", at: "a")
         if let url = destinationUrlString , url.hasImageSuffix {
