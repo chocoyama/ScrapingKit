@@ -25,7 +25,10 @@ open class TitleParser: Parser {
     
     public func parse(_ url: URL) {
         let jiDoc = Ji(htmlURL: url)
-        self.result = jiDoc?.xPath("//title")?.first?.content
+        let content = jiDoc?.xPath("//title")?.first?.content
+        self.result = content?
+            .replacingOccurrences(of: "\r", with: "")
+            .replacingOccurrences(of: "\n", with: "")
     }
     
     public func getResult(completion: @escaping (Optional<String>) -> Void) {
