@@ -1,17 +1,17 @@
 //
-//  ScrapingFaviconTests.swift
+//  ScrapingTitleTests.swift
 //  ScrapingKit
 //
-//  Created by Takuya Yokoyama on 2017/03/16.
+//  Created by Takuya Yokoyama on 2017/03/18.
 //  Copyright © 2017年 chocoyama. All rights reserved.
 //
 
 import XCTest
 @testable import ScrapingKit
 
-class ScrapingFaviconTests: XCTestCase {
-
-    let scraper = Scraper<FaviconParser>()
+class ScrapingTitleTests: XCTestCase {
+    
+    let scraper = Scraper<TitleParser>()
     
     override func setUp() {
         super.setUp()
@@ -21,10 +21,10 @@ class ScrapingFaviconTests: XCTestCase {
         super.tearDown()
     }
     
-    func testScraping() {
+    func testScrapint() {
         let expectation = self.expectation(description: "scraping")
         
-        let testUrlString = "http://vipsister23.com/"
+        let testUrlString = "https://matome.naver.jp"
         scraper.scrape(testUrlString) { (result) in
             defer { expectation.fulfill() }
             print("")

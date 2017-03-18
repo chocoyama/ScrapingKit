@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6B149B131E7AC9440065D821 /* FaviconParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B149B121E7AC9440065D821 /* FaviconParser.swift */; };
 		6B149B151E7ACB7B0065D821 /* ScrapingFaviconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B149B141E7ACB7B0065D821 /* ScrapingFaviconTests.swift */; };
+		6B1AC6151E7D0A9B00A486FE /* TitleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AC6141E7D0A9B00A486FE /* TitleParser.swift */; };
+		6B1AC6171E7D0B9400A486FE /* ScrapingTitleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AC6161E7D0B9400A486FE /* ScrapingTitleTests.swift */; };
 		8065D9B21E2139950062A064 /* ScrapingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8065D9A81E2139950062A064 /* ScrapingKit.framework */; };
 		8065D9B71E2139950062A064 /* ScrapingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8065D9B61E2139950062A064 /* ScrapingKitTests.swift */; };
 		8065D9B91E2139950062A064 /* ScrapingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8065D9AB1E2139950062A064 /* ScrapingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +75,8 @@
 /* Begin PBXFileReference section */
 		6B149B121E7AC9440065D821 /* FaviconParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaviconParser.swift; sourceTree = "<group>"; };
 		6B149B141E7ACB7B0065D821 /* ScrapingFaviconTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapingFaviconTests.swift; sourceTree = "<group>"; };
+		6B1AC6141E7D0A9B00A486FE /* TitleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleParser.swift; sourceTree = "<group>"; };
+		6B1AC6161E7D0B9400A486FE /* ScrapingTitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapingTitleTests.swift; sourceTree = "<group>"; };
 		8065D9A81E2139950062A064 /* ScrapingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScrapingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8065D9AB1E2139950062A064 /* ScrapingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrapingKit.h; sourceTree = "<group>"; };
 		8065D9AC1E2139950062A064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +135,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1AC6121E7D0A6600A486FE /* FaviconParser */ = {
+			isa = PBXGroup;
+			children = (
+				6B149B121E7AC9440065D821 /* FaviconParser.swift */,
+			);
+			name = FaviconParser;
+			sourceTree = "<group>";
+		};
+		6B1AC6131E7D0A7C00A486FE /* TitleParser */ = {
+			isa = PBXGroup;
+			children = (
+				6B1AC6141E7D0A9B00A486FE /* TitleParser.swift */,
+			);
+			name = TitleParser;
+			sourceTree = "<group>";
+		};
 		8065D99E1E2139950062A064 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +190,7 @@
 				8065D9B61E2139950062A064 /* ScrapingKitTests.swift */,
 				807D14111E2158E700EEE7F2 /* ScrapingImageTests.swift */,
 				6B149B141E7ACB7B0065D821 /* ScrapingFaviconTests.swift */,
+				6B1AC6161E7D0B9400A486FE /* ScrapingTitleTests.swift */,
 				8065D9B81E2139950062A064 /* Info.plist */,
 			);
 			path = ScrapingKitTests;
@@ -188,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				807D140A1E21476200EEE7F2 /* Parser.swift */,
+				6B1AC6131E7D0A7C00A486FE /* TitleParser */,
+				6B1AC6121E7D0A6600A486FE /* FaviconParser */,
 				807D14061E21470400EEE7F2 /* ImageParser */,
 			);
 			name = Parser;
@@ -198,7 +221,6 @@
 			children = (
 				8065D9CA1E213ACA0062A064 /* SKImage.swift */,
 				807D14081E21472800EEE7F2 /* ImageParser.swift */,
-				6B149B121E7AC9440065D821 /* FaviconParser.swift */,
 			);
 			name = ImageParser;
 			sourceTree = "<group>";
@@ -424,6 +446,7 @@
 				807D140D1E214D0D00EEE7F2 /* JiNode++CustomExtension.swift in Sources */,
 				807D14091E21472800EEE7F2 /* ImageParser.swift in Sources */,
 				8065D9C91E213A7A0062A064 /* Scraper.swift in Sources */,
+				6B1AC6151E7D0A9B00A486FE /* TitleParser.swift in Sources */,
 				807D140B1E21476200EEE7F2 /* Parser.swift in Sources */,
 				8065D9CD1E213B500062A064 /* String+CustomExtension.swift in Sources */,
 				8065D9CB1E213ACA0062A064 /* SKImage.swift in Sources */,
@@ -437,6 +460,7 @@
 				807D14121E2158E700EEE7F2 /* ScrapingImageTests.swift in Sources */,
 				6B149B151E7ACB7B0065D821 /* ScrapingFaviconTests.swift in Sources */,
 				8065D9B71E2139950062A064 /* ScrapingKitTests.swift in Sources */,
+				6B1AC6171E7D0B9400A486FE /* ScrapingTitleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
