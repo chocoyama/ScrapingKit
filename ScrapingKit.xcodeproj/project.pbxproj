@@ -11,6 +11,7 @@
 		6B149B151E7ACB7B0065D821 /* ScrapingFaviconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B149B141E7ACB7B0065D821 /* ScrapingFaviconTests.swift */; };
 		6B1AC6151E7D0A9B00A486FE /* TitleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AC6141E7D0A9B00A486FE /* TitleParser.swift */; };
 		6B1AC6171E7D0B9400A486FE /* ScrapingTitleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AC6161E7D0B9400A486FE /* ScrapingTitleTests.swift */; };
+		6BF451921E7E2F5B00E1FF20 /* ImageUrlValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF451911E7E2F5B00E1FF20 /* ImageUrlValidator.swift */; };
 		8065D9B21E2139950062A064 /* ScrapingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8065D9A81E2139950062A064 /* ScrapingKit.framework */; };
 		8065D9B71E2139950062A064 /* ScrapingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8065D9B61E2139950062A064 /* ScrapingKitTests.swift */; };
 		8065D9B91E2139950062A064 /* ScrapingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8065D9AB1E2139950062A064 /* ScrapingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,6 +78,7 @@
 		6B149B141E7ACB7B0065D821 /* ScrapingFaviconTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapingFaviconTests.swift; sourceTree = "<group>"; };
 		6B1AC6141E7D0A9B00A486FE /* TitleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleParser.swift; sourceTree = "<group>"; };
 		6B1AC6161E7D0B9400A486FE /* ScrapingTitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapingTitleTests.swift; sourceTree = "<group>"; };
+		6BF451911E7E2F5B00E1FF20 /* ImageUrlValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrlValidator.swift; sourceTree = "<group>"; };
 		8065D9A81E2139950062A064 /* ScrapingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScrapingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8065D9AB1E2139950062A064 /* ScrapingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrapingKit.h; sourceTree = "<group>"; };
 		8065D9AC1E2139950062A064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				807D140E1E21541800EEE7F2 /* URLCompleter.swift */,
 				807D14101E21566200EEE7F2 /* Extension */,
+				6BF451911E7E2F5B00E1FF20 /* ImageUrlValidator.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF451921E7E2F5B00E1FF20 /* ImageUrlValidator.swift in Sources */,
 				807D140F1E21541800EEE7F2 /* URLCompleter.swift in Sources */,
 				6B149B131E7AC9440065D821 /* FaviconParser.swift in Sources */,
 				807D140D1E214D0D00EEE7F2 /* JiNode++CustomExtension.swift in Sources */,

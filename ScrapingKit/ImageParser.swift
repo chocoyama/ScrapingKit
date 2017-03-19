@@ -124,11 +124,13 @@ extension ImageParser {
         // TODO: 暫定対応中（以下のURLどちらも対応するため）
         // http://ord.yahoo.co.jp/o/image/_ylt=A2RivclnwRpXNW4AFE.U3uV7/SIG=11ufrp1k9/EXP=1461457639/**https%3a//t.pimg.jp/000/877/514/1/877514.jpg
         // http://bijodai.grfft.jp/uploads/model/profile/杉山さん21_s.jpg
-        let imageUrl = URLCompleter.completeUrlIfNeeded(
+        let completeImageUrl = URLCompleter.completeUrlIfNeeded(
             baseUrl: url,
             targetUrl: imageUrlString
                         .replacingOccurrences(of: "\n", with: "")
                         .encodeIfOnlySingleByteCharacter())
+
+        guard let validateImageUrlString = ImageUrlValidator.valiedate(urlString: completeImageUrl)?.absoluteString else { return }
         
         let destinationUrl = destinationUrlString.flatMap{
             URLCompleter.completeUrlIfNeeded(
@@ -139,10 +141,10 @@ extension ImageParser {
             )
         }
         
-        let isExistsUrl = images.contains{ $0.imageUrlString == imageUrl }
+        let isExistsUrl = images.contains{ $0.imageUrlString == validateImageUrlString }
         if !isExistsUrl {
             images.append(.init(
-                imageUrlString: imageUrl,
+                imageUrlString: validateImageUrlString,
                 destinationUrlString: destinationUrl
             ))
         }
