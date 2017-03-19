@@ -22,7 +22,7 @@ struct ImageUrlValidator {
             return nil
         }
         
-        let urlString = "\(scheme)://\(host)\(url.path)\(path)"
+        let urlString = "\(scheme)://\(host)\(path)"
         return URL(string: urlString)
     }
 }
