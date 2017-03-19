@@ -15,14 +15,13 @@ struct ImageUrlValidator {
     }
     
     static func validate(url: URL) -> URL? {
-        guard let scheme = url.scheme, let host = url.host else { return nil}
+        guard let _ = url.scheme, let _ = url.host else { return nil}
         let path = url.path
         
         if path.hasSuffix(".html") || path.hasSuffix(".php") {
             return nil
         }
         
-        let urlString = "\(scheme)://\(host)\(path)"
-        return URL(string: urlString)
+        return url
     }
 }
